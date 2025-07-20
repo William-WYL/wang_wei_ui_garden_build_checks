@@ -21,7 +21,7 @@ const Container = styled.div<{ $backgroundImage: string; disabled?: boolean }>`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Subtitle = styled.p`
