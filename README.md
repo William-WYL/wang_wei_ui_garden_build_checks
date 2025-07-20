@@ -23,8 +23,6 @@ This command runs the container and maps it to localhost:8083:
 docker run -d -p 8083:80 --name wang_wei_coding_assignment12 williamwyl/ui-garden:latest
 ```
 
-
-
 3. **Open the App in Browser**
 
 Go to:
@@ -52,9 +50,9 @@ docker rm wang_wei_coding_assignment12
 This is a component library built with:
 
     React + TypeScript
-    
+
     Storybook for interactive previews
-    
+
     Styled-components for styling
-    
+
     Docker for deployment

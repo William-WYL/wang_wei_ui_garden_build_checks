@@ -1,14 +1,14 @@
-import Label from "./Label";
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import Label from './Label';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    text: { control: "text" },
-    htmlFor: { control: "text" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    htmlFor: { control: 'text' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -18,14 +18,14 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {
   args: {
-    text: "Username",
+    text: 'Username',
     disabled: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    text: "Password",
+    text: 'Password',
     disabled: true,
   },
 };

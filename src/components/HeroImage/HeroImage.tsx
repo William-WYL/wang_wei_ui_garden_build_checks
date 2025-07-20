@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import styled from 'styled-components';
+import { HeroImageProps } from './HeroImage.types';
 
-const Container = styled.div<{ backgroundImage: string; disabled?: boolean; }>`
-  background-image: url(${(props) => props.backgroundImage});
+const Container = styled.div<{ backgroundImage: string; disabled?: boolean }>`
+  background-image: url(${props => props.backgroundImage});
   background-size: cover;
   background-position: center;
   padding: 4rem 2rem;
   text-align: center;
   color: white;
-  filter: ${(props) => (props.disabled ? "grayscale(100%)" : "none")};
-  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  filter: ${props => (props.disabled ? 'grayscale(100%)' : 'none')};
+  pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
 `;
 
 const Title = styled.h1`
@@ -29,7 +29,11 @@ const HeroImage: React.FC<HeroImageProps> = ({
   disabled,
 }) => {
   return (
-    <Container backgroundImage={backgroundImage} disabled={disabled} data-testid="hero-container">
+    <Container
+      backgroundImage={backgroundImage}
+      disabled={disabled}
+      data-testid="hero-container"
+    >
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
     </Container>

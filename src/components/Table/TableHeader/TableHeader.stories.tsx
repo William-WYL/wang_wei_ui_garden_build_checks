@@ -1,14 +1,14 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import TableHeader from "./TableHeader";
-import TableCell from "../TableCell/TableCell";
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import TableHeader from './TableHeader';
+import TableCell from '../TableCell/TableCell';
 
 const meta: Meta<typeof TableHeader> = {
-  title: "Components/Table/TableHeader",
+  title: 'Components/Table/TableHeader',
   component: TableHeader,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    disabled: { control: "boolean" },
+    disabled: { control: 'boolean' },
   },
 };
 

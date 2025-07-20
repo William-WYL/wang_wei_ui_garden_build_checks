@@ -1,6 +1,6 @@
-import React from "react";
-import type { TableProps } from "./Table.types";
-import styled from "styled-components";
+import React from 'react';
+import type { TableProps } from './Table.types';
+import styled from 'styled-components';
 
 const StyledTable = styled.table`
   width: 100%;

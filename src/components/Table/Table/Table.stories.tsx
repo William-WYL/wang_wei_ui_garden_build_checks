@@ -1,11 +1,11 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import Table from "./Table";
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import Table from './Table';
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table/Table",
+  title: 'Components/Table/Table',
   component: Table,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {},
 };
 

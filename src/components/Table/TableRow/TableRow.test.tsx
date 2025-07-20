@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import TableRow from "./TableRow";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import TableRow from './TableRow';
 
-describe("TableRow Component", () => {
-  it("renders children and is visible", () => {
+describe('TableRow Component', () => {
+  it('renders children and is visible', () => {
     render(
       <table>
         <tbody>
@@ -12,12 +12,12 @@ describe("TableRow Component", () => {
             <td>Cell Content</td>
           </TableRow>
         </tbody>
-      </table>
+      </table>,
     );
-    expect(screen.getByText("Cell Content")).toBeVisible();
+    expect(screen.getByText('Cell Content')).toBeVisible();
   });
 
-  it("applies disabled styles when disabled is true", () => {
+  it('applies disabled styles when disabled is true', () => {
     render(
       <table>
         <tbody>
@@ -25,19 +25,19 @@ describe("TableRow Component", () => {
             <td>Disabled Cell</td>
           </TableRow>
         </tbody>
-      </table>
+      </table>,
     );
 
-    const row = screen.getByRole("row");
+    const row = screen.getByRole('row');
 
-    expect(row).toHaveStyle("background-color: #f0f0f0");
-    expect(row).toHaveStyle("cursor: not-allowed");
-    expect(row).toHaveAttribute("aria-disabled", "true");
+    expect(row).toHaveStyle('background-color: #f0f0f0');
+    expect(row).toHaveStyle('cursor: not-allowed');
+    expect(row).toHaveAttribute('aria-disabled', 'true');
   });
 
-  it("passes disabled prop to child components", () => {
-    const Child = ({ disabled }: { disabled?: boolean; }) => (
-      <div data-testid="child">{disabled ? "disabled" : "enabled"}</div>
+  it('passes disabled prop to child components', () => {
+    const Child = ({ disabled }: { disabled?: boolean }) => (
+      <div data-testid="child">{disabled ? 'disabled' : 'enabled'}</div>
     );
 
     render(
@@ -47,10 +47,10 @@ describe("TableRow Component", () => {
             <Child />
           </TableRow>
         </tbody>
-      </table>
+      </table>,
     );
 
-    const child = screen.getByTestId("child");
-    expect(child.textContent).toBe("disabled");
+    const child = screen.getByTestId('child');
+    expect(child.textContent).toBe('disabled');
   });
 });
