@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import 'jest-styled-components';
 import HeroImage from './HeroImage';
 
 describe('HeroImage Component', () => {
@@ -10,15 +9,8 @@ describe('HeroImage Component', () => {
     expect(screen.getByText('Sub')).toBeVisible();
   });
 
-  it('should apply grayscale filter and disable interactions when disabled', () => {
-    render(
-      <HeroImage
-        backgroundImage="bg.jpg"
-        title="Disabled"
-        subtitle="Hidden"
-        disabled
-      />,
-    );
+  it('should apply disabled styles when disabled is true', () => {
+    render(<HeroImage backgroundImage="bg.jpg" title="Hello" disabled />);
     const container = screen.getByTestId('hero-container');
     expect(container).toHaveStyle('filter: grayscale(100%)');
     expect(container).toHaveStyle('pointer-events: none');

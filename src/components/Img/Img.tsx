@@ -10,16 +10,8 @@ const StyledImg = styled.img<{ disabled?: boolean }>`
   filter: ${({ disabled }) => (disabled ? 'grayscale(100%)' : 'none')};
 `;
 
-const Img: React.FC<ImgProps> = ({ src, alt, width, height, disabled }) => {
-  return (
-    <StyledImg
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      disabled={disabled}
-    />
-  );
+const Img = ({ src, alt, width, height, disabled }: ImgProps) => {
+  return <StyledImg src={src} alt={alt} width={width} height={height} disabled={disabled} />;
 };
 
 export default Img;

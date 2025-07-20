@@ -8,7 +8,7 @@ const StyledLabel = styled.label<{ disabled?: boolean }>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
 `;
 
-const Label: React.FC<LabelProps> = ({ text, htmlFor, disabled }) => {
+const Label = ({ text, htmlFor, disabled }: LabelProps) => {
   return (
     <StyledLabel htmlFor={htmlFor} disabled={disabled}>
       {text}

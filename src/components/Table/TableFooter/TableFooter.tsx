@@ -13,19 +13,17 @@ const StyledTd = styled.td<{ disabled?: boolean }>`
   background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : 'inherit')};
 `;
 
-const TableFooter: React.FC<TableFooterProps> = ({
-  children,
-  disabled,
-  className,
-}) => {
+const TableFooter = ({ children, disabled, className }: TableFooterProps) => {
   return (
     <StyledTfoot className={className}>
       <tr>
-        {React.Children.map(children, child =>
-          React.isValidElement(child)
-            ? React.cloneElement(child as React.ReactElement<any>, { disabled })
-            : child,
-        )}
+        {React.Children.map(children, (child) => {
+          if (React.isValidElement(child)) {
+            const element = child as React.ReactElement<any>;
+            return <StyledTd disabled={disabled}>{element.props.children}</StyledTd>;
+          }
+          return <StyledTd disabled={disabled}>{child}</StyledTd>;
+        })}
       </tr>
     </StyledTfoot>
   );

@@ -13,19 +13,10 @@ const Select = styled.select<{ disabled?: boolean }>`
   width: 100%;
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({
-  options,
-  selectedValue,
-  onChange,
-  disabled = false,
-}) => {
+const Dropdown = ({ options, selectedValue, onChange, disabled = false }: DropdownProps) => {
   return (
-    <Select
-      disabled={disabled}
-      value={selectedValue}
-      onChange={e => onChange && onChange(e.target.value)}
-    >
-      {options.map(opt => (
+    <Select disabled={disabled} value={selectedValue} onChange={(e) => onChange && onChange(e.target.value)}>
+      {options.map((opt) => (
         <option key={opt.value} value={opt.value}>
           {opt.label}
         </option>

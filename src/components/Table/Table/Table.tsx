@@ -7,7 +7,7 @@ const StyledTable = styled.table`
   border-collapse: collapse;
 `;
 
-const Table: React.FC<TableProps> = ({ children, className }) => {
+const Table = ({ children, className }: TableProps) => {
   return <StyledTable className={className}>{children}</StyledTable>;
 };
 

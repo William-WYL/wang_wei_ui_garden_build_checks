@@ -1,3 +1,4 @@
+// Button.tsx
 import React from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
@@ -16,7 +17,7 @@ const StyledButton = styled.button<{ disabled?: boolean }>`
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, disabled }) => {
+const Button = ({ label, onClick, disabled }: ButtonProps) => {
   return (
     <StyledButton onClick={onClick} disabled={disabled}>
       {label}

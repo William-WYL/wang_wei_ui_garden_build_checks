@@ -9,11 +9,7 @@ const StyledTd = styled.td<{ disabled?: boolean }>`
   color: ${({ disabled }) => (disabled ? '#999' : 'inherit')};
 `;
 
-const TableCell: React.FC<TableCellProps> = ({
-  children,
-  disabled,
-  className,
-}) => {
+const TableCell = ({ children, disabled, className }: TableCellProps) => {
   return (
     <StyledTd disabled={disabled} className={className}>
       {children}

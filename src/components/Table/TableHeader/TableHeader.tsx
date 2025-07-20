@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import type { TableHeaderProps } from './TableHeader.types';
 import styled from 'styled-components';
 
@@ -13,22 +13,16 @@ const StyledTh = styled.th<{ disabled?: boolean }>`
   background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : 'inherit')};
 `;
 
-const TableHeader: React.FC<TableHeaderProps> = ({
-  children,
-  disabled,
-  className,
-}) => {
+const TableHeader = ({ children, disabled, className }: TableHeaderProps) => {
   return (
     <StyledThead className={className}>
       <tr>
-        {React.Children.map(children, child => {
+        {React.Children.map(children, (child) => {
           if (React.isValidElement(child)) {
-            return React.cloneElement(
-              child as ReactElement<{ disabled?: boolean }>,
-              { disabled },
-            );
+            const element = child as React.ReactElement<React.PropsWithChildren<{ disabled?: boolean }>>;
+            return <StyledTh disabled={disabled}>{element.props.children}</StyledTh>;
           }
-          return child;
+          return <StyledTh disabled={disabled}>{child}</StyledTh>;
         })}
       </tr>
     </StyledThead>

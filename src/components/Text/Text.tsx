@@ -8,7 +8,7 @@ const StyledText = styled.p<{ disabled?: boolean }>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'auto')};
 `;
 
-const Text: React.FC<TextProps> = ({ text, disabled = false }) => {
+const Text = ({ text, disabled = false }: TextProps) => {
   return <StyledText disabled={disabled}>{text}</StyledText>;
 };
 

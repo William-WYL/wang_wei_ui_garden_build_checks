@@ -36,8 +36,9 @@ describe('TableRow Component', () => {
   });
 
   it('passes disabled prop to child components', () => {
+    // Child must be a <td> to keep HTML table valid
     const Child = ({ disabled }: { disabled?: boolean }) => (
-      <div data-testid="child">{disabled ? 'disabled' : 'enabled'}</div>
+      <td data-testid="child">{disabled ? 'disabled' : 'enabled'}</td>
     );
 
     render(

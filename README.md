@@ -12,7 +12,7 @@ This guide explains how to run the UI Garden React Component Library from Docker
 1. **Pull the image from Docker Hub**
 
 ```bash
-docker pull williamwyl/ui-garden:latest
+docker pull williamwyl/wang_wei_coding_assignment13:latest
 ```
 
 2. **Run the container**
@@ -20,14 +20,14 @@ docker pull williamwyl/ui-garden:latest
 This command runs the container and maps it to localhost:8083:
 
 ```bash
-docker run -d -p 8083:80 --name wang_wei_coding_assignment12 williamwyl/ui-garden:latest
+docker run -d -p 8018:80 --name wang_wei_coding_assignment13 williamwyl/wang_wei_coding_assignment13:latest
 ```
 
 3. **Open the App in Browser**
 
 Go to:
 
-http://127.0.0.1:8083
+http://127.0.0.1:8018
 
 You should see the production build of the UI Garden React component library.
 
@@ -36,23 +36,25 @@ You should see the production build of the UI Garden React component library.
 To stop the running container:
 
 ```bash
-docker stop wang_wei_coding_assignment12
+docker stop wang_wei_coding_assignment13
 ```
 
 To remove it:
 
 ```bash
-docker rm wang_wei_coding_assignment12
+docker rm wang_wei_coding_assignment13
 ```
 
 #### 📦 About This App
 
 This is a component library built with:
 
-    React + TypeScript
+    Built with React + TypeScript
 
-    Storybook for interactive previews
+    Storybook integration for component previews
 
     Styled-components for styling
 
-    Docker for deployment
+    Husky pre-commit hooks to ensure code quality with Prettier, ESLint, and tests before commits
+
+    GitHub Actions configured for CI/CD to run the same quality checks on every push

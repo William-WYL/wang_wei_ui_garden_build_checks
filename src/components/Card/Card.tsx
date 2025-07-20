@@ -15,7 +15,7 @@ const StyledCard = styled.div<{ disabled?: boolean }>`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const Card: React.FC<CardProps> = ({ title, content, disabled }) => {
+const Card = ({ title, content, disabled }: CardProps) => {
   return (
     <StyledCard disabled={disabled} data-testid="card-container">
       <h3>{title}</h3>

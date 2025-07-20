@@ -1,12 +1,23 @@
 // src/App.tsx
 import React from 'react';
-import Button from './components/Button/Button';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to UI Garden</h1>
-      <Button label="Click me" />
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <header style={{ padding: '1rem' }}>
+        <h1>🌱 Welcome to UI Garden</h1>
+        <p>Storybook：</p>
+      </header>
+
+      <iframe
+        src="/storybook/index.html"
+        title="Storybook"
+        style={{
+          flexGrow: 1,
+          border: '1px solid #ccc',
+          borderRadius: '8px',
+        }}
+      ></iframe>
     </div>
   );
 }

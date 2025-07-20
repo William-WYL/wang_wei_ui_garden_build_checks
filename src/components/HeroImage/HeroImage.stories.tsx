@@ -18,7 +18,7 @@ type Story = StoryObj<typeof HeroImage>;
 
 export const Default: Story = {
   args: {
-    backgroundImage: 'https://via.placeholder.com/800x300',
+    backgroundImage: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80',
     title: 'Welcome to UI Garden',
     subtitle: 'Build beautiful components with ease',
     disabled: false,
@@ -27,7 +27,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   args: {
-    backgroundImage: 'https://via.placeholder.com/800x300',
+    backgroundImage: 'https://placehold.co/1200x500?text=Disabled+Hero+Image',
     title: 'Access Restricted',
     subtitle: "You can't interact with this section",
     disabled: true,

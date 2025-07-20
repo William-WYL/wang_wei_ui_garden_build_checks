@@ -13,13 +13,7 @@ const Input = styled.input`
   margin-right: 8px;
 `;
 
-const RadioButton: React.FC<RadioButtonProps> = ({
-  label,
-  name,
-  checked = false,
-  disabled = false,
-  onChange,
-}) => {
+const RadioButton = ({ label, name, checked = false, disabled = false, onChange }: RadioButtonProps) => {
   return (
     <Label data-testid="radio-label" disabled={disabled}>
       <Input
@@ -27,7 +21,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
         name={name}
         checked={checked}
         disabled={disabled}
-        onChange={e => onChange && onChange(e.target.checked)}
+        onChange={(e) => onChange && onChange(e.target.checked)}
       />
       {label}
     </Label>
