@@ -103,7 +103,7 @@
           ...Default.parameters?.docs,
           source: {
             originalSource:
-              '{\n  args: {\n    src: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=600&q=80",\n    alt: "Placeholder Image",\n    width: "400px",\n    height: "500px",\n    disabled: false\n  }\n}',
+              "{\n  args: {\n    src: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=600&q=80',\n    alt: 'Placeholder Image',\n    width: '400px',\n    height: '500px',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -114,7 +114,7 @@
             ...Disabled.parameters?.docs,
             source: {
               originalSource:
-                '{\n  args: {\n    src: "https://placehold.co/600x400?text=Disabled+Image",\n    alt: "Disabled Image",\n    width: "400px",\n    height: "500px",\n    disabled: true\n  }\n}',
+                "{\n  args: {\n    src: 'https://placehold.co/600x400?text=Disabled+Image',\n    alt: 'Disabled Image',\n    width: '400px',\n    height: '500px',\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },

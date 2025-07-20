@@ -108,7 +108,7 @@
           ...Default.parameters?.docs,
           source: {
             originalSource:
-              '{\n  args: {\n    options: sampleOptions,\n    selectedValue: "opt1",\n    disabled: false\n  }\n}',
+              "{\n  args: {\n    options: sampleOptions,\n    selectedValue: 'opt1',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -119,7 +119,7 @@
             ...Disabled.parameters?.docs,
             source: {
               originalSource:
-                '{\n  args: {\n    options: sampleOptions,\n    selectedValue: "opt2",\n    disabled: true\n  }\n}',
+                "{\n  args: {\n    options: sampleOptions,\n    selectedValue: 'opt2',\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },

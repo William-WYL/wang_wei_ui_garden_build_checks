@@ -28,7 +28,7 @@
         docs: {
           ...Default.parameters?.docs,
           source: {
-            originalSource: '{\n  args: {\n    children: "Cell content",\n    disabled: false\n  }\n}',
+            originalSource: "{\n  args: {\n    children: 'Cell content',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -38,7 +38,7 @@
           docs: {
             ...Disabled.parameters?.docs,
             source: {
-              originalSource: '{\n  args: {\n    children: "Disabled cell",\n    disabled: true\n  }\n}',
+              originalSource: "{\n  args: {\n    children: 'Disabled cell',\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },

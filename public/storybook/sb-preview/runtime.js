@@ -44821,7 +44821,11 @@ function vbe(e) {
 }
 o(vbe, 'createDataTransferStub');
 function ni(e, t = []) {
-  let r = typeof e.DataTransfer > 'u' ? vbe(e) : /* istanbul ignore next */ new e.DataTransfer();
+  let r =
+    typeof e.DataTransfer > 'u'
+      ? vbe(e)
+      : /* istanbul ignore next */
+        new e.DataTransfer();
   return (
     Object.defineProperty(r, 'files', {
       get: /* @__PURE__ */ o(() => aa(e, t), 'get'),
@@ -45052,7 +45056,10 @@ function jn(e) {
 o(jn, 'getActiveElement');
 function Hh(e) {
   var t;
-  return (t = jn(e)) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body;
+  return (t = jn(e)) !== null && t !== void 0
+    ? t
+    : /* istanbul ignore next */
+      e.body;
 }
 o(Hh, 'getActiveElementOrBody');
 
@@ -48182,7 +48189,11 @@ o(nge, 'readSelectedValueFromInput');
 async function tU() {
   let e = this.config.document;
   var t;
-  let r = (t = e.activeElement) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body,
+  let r =
+      (t = e.activeElement) !== null && t !== void 0
+        ? t
+        : /* istanbul ignore next */
+          e.body,
     n = sy(r);
   if (n.items.length !== 0)
     return (
@@ -48200,7 +48211,11 @@ o(tU, 'copy');
 async function rU() {
   let e = this.config.document;
   var t;
-  let r = (t = e.activeElement) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body,
+  let r =
+      (t = e.activeElement) !== null && t !== void 0
+        ? t
+        : /* istanbul ignore next */
+          e.body,
     n = sy(r);
   if (n.items.length !== 0)
     return (
@@ -48218,7 +48233,11 @@ o(rU, 'cut');
 async function nU(e) {
   let t = this.config.document;
   var r;
-  let n = (r = t.activeElement) !== null && r !== void 0 ? r : /* istanbul ignore next */ t.body;
+  let n =
+    (r = t.activeElement) !== null && r !== void 0
+      ? r
+      : /* istanbul ignore next */
+        t.body;
   var i;
   let s =
     (i = typeof e == 'string' ? oge(t, e) : e) !== null && i !== void 0
@@ -48580,7 +48599,11 @@ function bU(e = {}) {
   let t = yU(e);
   (OS(t.document), PS(Ae(t.document).HTMLElement));
   var r;
-  let n = (r = t.document.defaultView) !== null && r !== void 0 ? r : /* istanbul ignore next */ globalThis.window;
+  let n =
+    (r = t.document.defaultView) !== null && r !== void 0
+      ? r
+      : /* istanbul ignore next */
+        globalThis.window;
   return (DB(n), HS(t).api);
 }
 o(bU, 'setupMain');

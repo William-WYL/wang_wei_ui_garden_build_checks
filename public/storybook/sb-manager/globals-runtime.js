@@ -18675,8 +18675,8 @@ var ue,
     P2e = /* @__PURE__ */ a((e, t = () => {}) => {
       let r = { left: e.scrollLeft, top: e.scrollTop },
         n = 0;
-      return /* @__PURE__ */ (
-        a(function o() {
+      return (
+        /* @__PURE__ */ a(function o() {
           let i = { left: e.scrollLeft, top: e.scrollTop },
             s = r.left !== i.left,
             l = r.top !== i.top;
@@ -79762,7 +79762,11 @@ function tat(e) {
 }
 a(tat, 'createDataTransferStub');
 function Kd(e, t = []) {
-  let r = typeof e.DataTransfer > 'u' ? tat(e) : /* istanbul ignore next */ new e.DataTransfer();
+  let r =
+    typeof e.DataTransfer > 'u'
+      ? tat(e)
+      : /* istanbul ignore next */
+        new e.DataTransfer();
   return (
     Object.defineProperty(r, 'files', {
       get: /* @__PURE__ */ a(() => zh(e, t), 'get'),
@@ -79993,7 +79997,10 @@ function mu(e) {
 a(mu, 'getActiveElement');
 function XS(e) {
   var t;
-  return (t = mu(e)) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body;
+  return (t = mu(e)) !== null && t !== void 0
+    ? t
+    : /* istanbul ignore next */
+      e.body;
 }
 a(XS, 'getActiveElementOrBody');
 
@@ -83123,7 +83130,11 @@ a(jat, 'readSelectedValueFromInput');
 async function Eme() {
   let e = this.config.document;
   var t;
-  let r = (t = e.activeElement) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body,
+  let r =
+      (t = e.activeElement) !== null && t !== void 0
+        ? t
+        : /* istanbul ignore next */
+          e.body,
     n = p4(r);
   if (n.items.length !== 0)
     return (
@@ -83141,7 +83152,11 @@ a(Eme, 'copy');
 async function Rme() {
   let e = this.config.document;
   var t;
-  let r = (t = e.activeElement) !== null && t !== void 0 ? t : /* istanbul ignore next */ e.body,
+  let r =
+      (t = e.activeElement) !== null && t !== void 0
+        ? t
+        : /* istanbul ignore next */
+          e.body,
     n = p4(r);
   if (n.items.length !== 0)
     return (
@@ -83159,7 +83174,11 @@ a(Rme, 'cut');
 async function xme(e) {
   let t = this.config.document;
   var r;
-  let n = (r = t.activeElement) !== null && r !== void 0 ? r : /* istanbul ignore next */ t.body;
+  let n =
+    (r = t.activeElement) !== null && r !== void 0
+      ? r
+      : /* istanbul ignore next */
+        t.body;
   var o;
   let i =
     (o = typeof e == 'string' ? Bat(t, e) : e) !== null && o !== void 0
@@ -83521,7 +83540,11 @@ function Dme(e = {}) {
   let t = qme(e);
   (LN(t.document), MN(gt(t.document).HTMLElement));
   var r;
-  let n = (r = t.document.defaultView) !== null && r !== void 0 ? r : /* istanbul ignore next */ globalThis.window;
+  let n =
+    (r = t.document.defaultView) !== null && r !== void 0
+      ? r
+      : /* istanbul ignore next */
+        globalThis.window;
   return (ape(n), GN(t).api);
 }
 a(Dme, 'setupMain');

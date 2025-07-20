@@ -111,7 +111,7 @@
           ...Default.parameters?.docs,
           source: {
             originalSource:
-              '{\n  args: {\n    label: "Option 1",\n    name: "group1",\n    checked: false,\n    disabled: false\n  }\n}',
+              "{\n  args: {\n    label: 'Option 1',\n    name: 'group1',\n    checked: false,\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -122,7 +122,7 @@
             ...Disabled.parameters?.docs,
             source: {
               originalSource:
-                '{\n  args: {\n    label: "Option 2",\n    name: "group1",\n    checked: true,\n    disabled: true\n  }\n}',
+                "{\n  args: {\n    label: 'Option 2',\n    name: 'group1',\n    checked: true,\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },

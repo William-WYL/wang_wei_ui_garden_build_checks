@@ -32,13 +32,13 @@
               ';\n  pointer-events: ',
               ';\n',
             ])),
-          (props) => props.backgroundImage,
+          (props) => props.$backgroundImage,
           (props) => (props.disabled ? 'grayscale(100%)' : 'none'),
           (props) => (props.disabled ? 'none' : 'auto'),
         ),
         Title = styled_components_browser_esm.Ay.h1(
           _templateObject2 ||
-            (_templateObject2 = (0, taggedTemplateLiteral.A)(['\n  font-size: 2.5rem;\n  margin-bottom: 1rem;\n'])),
+            (_templateObject2 = (0, taggedTemplateLiteral.A)(['\n  font-size: 2.5rem;\n  margin-bottom: 2rem;\n'])),
         ),
         Subtitle = styled_components_browser_esm.Ay.p(
           _templateObject3 || (_templateObject3 = (0, taggedTemplateLiteral.A)(['\n  font-size: 1.25rem;\n'])),
@@ -46,7 +46,7 @@
         HeroImage = (_ref) => {
           let { backgroundImage, title, subtitle, disabled } = _ref;
           return (0, jsx_runtime.jsxs)(Container, {
-            backgroundImage,
+            $backgroundImage: backgroundImage,
             disabled,
             'data-testid': 'hero-container',
             children: [
@@ -102,7 +102,7 @@
           ...Default.parameters?.docs,
           source: {
             originalSource:
-              '{\n  args: {\n    backgroundImage: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80",\n    title: "Welcome to UI Garden",\n    subtitle: "Build beautiful components with ease",\n    disabled: false\n  }\n}',
+              "{\n  args: {\n    backgroundImage: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80',\n    title: 'Welcome to UI Garden',\n    subtitle: 'Build beautiful components with ease',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -113,7 +113,7 @@
             ...Disabled.parameters?.docs,
             source: {
               originalSource:
-                '{\n  args: {\n    backgroundImage: "https://placehold.co/1200x500?text=Disabled+Hero+Image",\n    title: "Access Restricted",\n    subtitle: "You can\'t interact with this section",\n    disabled: true\n  }\n}',
+                "{\n  args: {\n    backgroundImage: 'https://placehold.co/1200x500?text=Disabled+Hero+Image',\n    title: 'Access Restricted',\n    subtitle: \"You can't interact with this section\",\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },

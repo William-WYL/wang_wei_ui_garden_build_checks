@@ -81,7 +81,7 @@
         docs: {
           ...Default.parameters?.docs,
           source: {
-            originalSource: '{\n  args: {\n    label: "Click Me",\n    disabled: false\n  }\n}',
+            originalSource: "{\n  args: {\n    label: 'Click Me',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },

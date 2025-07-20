@@ -23,7 +23,7 @@
             (_templateObject = (0, taggedTemplateLiteral.A)([
               '\n  background-color: ',
               ';\n  cursor: ',
-              ';\n  padding: 1rem;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n',
+              ';\n  padding: 1rem;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n',
             ])),
           (_ref) => {
             let { disabled } = _ref;
@@ -71,7 +71,7 @@
           ...Default.parameters?.docs,
           source: {
             originalSource:
-              '{\n  args: {\n    title: "Card Title",\n    content: "This is card content.",\n    disabled: false\n  }\n}',
+              "{\n  args: {\n    title: 'Card Title',\n    content: 'This is card content.',\n    disabled: false\n  }\n}",
             ...Default.parameters?.docs?.source,
           },
         },
@@ -82,7 +82,7 @@
             ...Disabled.parameters?.docs,
             source: {
               originalSource:
-                '{\n  args: {\n    title: "Disabled Card",\n    content: "This card is disabled.",\n    disabled: true\n  }\n}',
+                "{\n  args: {\n    title: 'Disabled Card',\n    content: 'This card is disabled.',\n    disabled: true\n  }\n}",
               ...Disabled.parameters?.docs?.source,
             },
           },
