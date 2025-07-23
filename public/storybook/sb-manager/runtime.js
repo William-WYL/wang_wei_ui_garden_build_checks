@@ -1770,8 +1770,8 @@ Output:
         e.exports = {
           get: /* @__PURE__ */ a(function (l, u) {
             var c = [];
-            return (
-              /* @__PURE__ */ a(function d(p, m) {
+            return /* @__PURE__ */ (
+              a(function d(p, m) {
                 if (m) {
                   var h = m.indexOf('.'),
                     b = m,
@@ -11910,13 +11910,7 @@ y to select.'
 }
 a(Dx, 'getA11yStatusMessage');
 function Op(e, t) {
-  return (
-    (e = Array.isArray(e)
-      ? /* istanbul ignore next (preact) */
-        e[0]
-      : e),
-    !e && t ? t : e
-  );
+  return ((e = Array.isArray(e) ? /* istanbul ignore next (preact) */ e[0] : e), !e && t ? t : e);
 }
 a(Op, 'unwrapArray');
 function Mx(e) {
@@ -12551,11 +12545,7 @@ var Bp = 0,
             I.onPress;
             var k = I.index,
               T = I.item,
-              C =
-                T === void 0
-                  ? /* istanbul ignore next */
-                    void 0
-                  : T,
+              C = T === void 0 ? /* istanbul ignore next */ void 0 : T,
               P = ke(I, jx);
             k === void 0 ? (n.items.push(C), (k = n.items.indexOf(C))) : (n.items[k] = C);
             var D = 'onClick',
