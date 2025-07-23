@@ -15,7 +15,7 @@ function App() {
         style={{
           flexGrow: 1,
           border: '1px solid #ccc',
-          borderRadius: '8px',
+          borderRadius: '7px',
         }}
       ></iframe>
     </div>
