@@ -10,7 +10,7 @@ const StyledTr = styled.tr<{ disabled?: boolean }>`
 
 const TableRow = ({ children, disabled = false }: TableRowProps) => {
   return (
-    <StyledTr disabled={disabled} aria-disabled={disabled}>
+    <StyledTr disabled={disabled} aria-disabled={disabled} role="row">
       {React.Children.map(children, (child) =>
         React.isValidElement<{ disabled?: boolean }>(child) ? React.cloneElement(child, { disabled }) : child,
       )}
