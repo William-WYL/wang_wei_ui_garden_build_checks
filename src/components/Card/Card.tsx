@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export interface CardProps {
   title: string;
   content?: string;
-  disabled?: boolean
-};
+  disabled?: boolean;
+}
 
 const StyledCard = styled.div<{ disabled?: boolean }>`
   background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : 'white')};
