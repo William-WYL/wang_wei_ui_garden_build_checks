@@ -28,8 +28,8 @@ jobs:
       - name: Run Prettier check
         run: npx prettier --check .
 
-      - name: Run ESLint check
-        run: npx eslint .
+        - name: Run ESLint check
+          run: npx eslint . --ignore-path .eslintignore
 
       - name: Run tests with coverage
         run: npm test -- --ci --coverage --watchAll=false
